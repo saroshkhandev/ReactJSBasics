@@ -1,4 +1,5 @@
-import Expenses from "./components/Expenses";
+// import React from 'react'; newer react does not need to import react
+import Expenses from "./components/Expenses/Expenses";
 function App() {
   const expenses = [
     {
@@ -22,6 +23,15 @@ function App() {
     },
   ];
   // we can pass attributes in jsx and then import in component with props.
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, {items: expenses})
+  // );
+
+// this is the underhood code for this return statement.
+
   return (
     <div>
       <h2>Let's get started!</h2>
