@@ -3,7 +3,7 @@ import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 // props get the data that is passed in the tag of jsx as an attribute.
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   const expenseTitle = props.title;
   const expenseAmount = props.amount;
 

@@ -1,6 +1,7 @@
 // import React from 'react'; newer react does not need to import react
 import Expenses from "./components/Expenses/Expenses";
-function App() {
+
+const App = () => {
   const expenses = [
     {
       id: "e1",
