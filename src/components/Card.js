@@ -13,4 +13,4 @@ export default Card;
 // which is a basic normal nature according to html
 // so we created a wrapper class.
 // one more thing we also cannot pass multiple classes for our component tag so for that we 
-// created a classes array and then passed it here.
+// created a classes array and then passed it here. --Update
