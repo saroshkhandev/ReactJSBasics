@@ -6,7 +6,9 @@ import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
   const [expenseTitle, setTitle] = useState(props.title);
-
+  // use state gives us two outputs 1. the value which is passed into it as parameter
+  // 2. a function to change its value.
+  // Every title have its own state that's why it does not changes every title.
   // let expenseTitle = props.title;
   const expenseAmount = props.amount;
 
