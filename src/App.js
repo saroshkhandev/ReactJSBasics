@@ -1,9 +1,9 @@
 // import React from 'react'; newer react does not need to import react
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const App = () => {
-  const expenses = [
+  const DUMMY_EXPENSES = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -25,13 +25,22 @@ const App = () => {
     },
   ];
 
+
+const App = () => {
+  
+
+  const [expenses, addExpense] = useState(DUMMY_EXPENSES);
+
   const addExpensesHandler = (expense) => {
     // expenses = {
     //   ...expenses,
     //   ...enteredExpense,
     // };
-    console.log('In App.js');
-    console.log(expense);
+    // addExpense([expense, ...DUMMY_EXPENSES]);
+    addExpense(prevExpenses => {
+      return [expense, ...prevExpenses];
+    });
+
   };
   // we can pass attributes in jsx and then import in component with props.
   // return React.createElement(
@@ -49,6 +58,6 @@ const App = () => {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
