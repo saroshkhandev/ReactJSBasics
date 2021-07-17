@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
-// props get the data that is passed in the tag of jsx as an attribute.
+// props get the data that is passed in the tag of jsx as an attribute -- updated.
 
 const ExpenseItem = (props) => {
   const [expenseTitle, setTitle] = useState(props.title);
