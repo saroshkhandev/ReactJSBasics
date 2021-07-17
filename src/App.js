@@ -24,6 +24,15 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpensesHandler = (expense) => {
+    // expenses = {
+    //   ...expenses,
+    //   ...enteredExpense,
+    // };
+    console.log('In App.js');
+    console.log(expense);
+  };
   // we can pass attributes in jsx and then import in component with props.
   // return React.createElement(
   //   'div',
@@ -32,11 +41,11 @@ const App = () => {
   //   React.createElement(Expenses, {items: expenses})
   // );
 
-// this is the underhood code for this return statement.
-
+  // this is the underhood code for this return statement.
+  //  newExpenseItem={addExpensesHandler}
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpensesHandler} />
       <Expenses items={expenses} />
     </div>
   );
